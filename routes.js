@@ -17,6 +17,7 @@ var express = require('express'),
 
 //Static Files
 router.use(express.static(__dirname + '/styles'));
+router.use(express.static(__dirname + '/images'));
 
 //Pages
 router.get('/', function(req, res) {
