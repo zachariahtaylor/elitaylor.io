@@ -5,6 +5,7 @@
 var express = require('express'),
     path = require('path'),
     bodyParser = require('body-parser'),
+    fs = require('fs'),
     logger = require('morgan'),
     http = require('http'),
     mongoose = require('mongoose'),
@@ -12,7 +13,9 @@ var express = require('express'),
     app = express();
 
 
-app.use(logger('Developer')); //Developer logger
+//app.use(logger('Developer')); //Developer logger
+var accessLogStream = fs.createWriteStream(__dirname + '/logs/access.log', {flags: 'a'});
+app.use(logger('combined', {stream: accessLogStream}))
 
 app.use(bodyParser.json()); //Parse response body into JSON
 app.use(bodyParser.urlencoded({extended: true}));
@@ -20,8 +23,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 app.use('/', routes);
 
-
-app.listen(80, function () {
+app.listen(80, function (req,res) {
     console.log('Server listening on port 80.');
 });
 

@@ -1,7 +1,12 @@
 /*
 Color Scheme
-Lightgrey 
-#FFFFFF
+A Beautiful Day
+rgb(253,125,1)
+#f6c293
+#8dbbb8
+#53a0b0
+#346d88
+#0f3542
 
 */
 
@@ -24,6 +29,7 @@ body{
     font-family: sans-serif;
     font-weight: lighter;
     min-height: 100%;
+    font-size: 62.5%;
 }
 
 /*
@@ -60,17 +66,18 @@ svg - floats logo right and gives it similar padding to tabs.
     position: fixed;
     vertical-align: top;
     width: 100%;
-    font-size: 18px;
-    border: solid 1px lightgrey;
-    max-height: 55px;
+    font-size: 1.7em;
+    border: solid .1em lightgrey;
+    max-height: 3em;
     background:rgb(255, 255, 255);
     background:rgba(255, 255, 255, .8);
+    z-index: 5;
 }
 
 .nav ul{
     list-style-type: none;
     margin: 0;
-    padding-right: 50px;
+    padding-right: 2em;
     overflow: hidden;
     display:inline;
     float:right;
@@ -88,7 +95,7 @@ svg - floats logo right and gives it similar padding to tabs.
     display: block;
     color: darkgrey;
     text-align: center;
-    padding: 15px;
+    padding: 1.5em;
     text-decoration: none;
 }
 
@@ -101,9 +108,9 @@ svg - floats logo right and gives it similar padding to tabs.
     display: none;
     position: absolute;
     background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    padding: 12px 16px;
+    min-width: 10.5em;
+    box-shadow: 0em 1em 1.5em 0em rgba(0,0,0,0.2);
+    padding: 1em 1.5em;
 }
 
 .nav li .dropdown:hover .dropdown-content{
@@ -113,7 +120,7 @@ svg - floats logo right and gives it similar padding to tabs.
 .nav svg {
     display: block;
     text-align: center;
-    padding: 15px;
+    padding: 1.5em;
     float: left;
 }
 
@@ -122,7 +129,88 @@ Section css
 
 Includes
 section - Defines a section and gives it a height.
+main - gives the backgorund image for the main header
+first - Gives background and height to first section
+content - Sets an area within that contains padding.
+
 */
-.section {
-    height: 100%;
+.section{
+    width:auto;
+    max-width: 100%;
+    overflow:hidden;
 }
+
+.main{
+    height:100vh;
+    background: url(Sunrise.jpg);
+    background-color: rgb(253,125,1);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.first{
+    background-color: #f6c293;
+}
+
+.second{
+    background-color: #53a0b0;
+}
+
+.content{
+    font-size: 2em;
+    padding: 2em;
+}
+
+.column-2{
+    -webkit-column-count: 2; /* Chrome, Safari, Opera */
+    -moz-column-count: 2; /* Firefox */
+    column-count: 2;
+    -webkit-column-gap: 1em; /* Chrome, Safari, Opera */
+    -moz-column-gap: 1em; /* Firefox */
+    column-gap: 1em;
+}
+
+/*
+Overlay CSS - Contains overlays and thier text counterparts
+
+Includes
+main overlay - orange tinge
+main overlay h1- center and visual
+main overlay 2 - smaller clear
+*/
+.main .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display:block;
+    height:100vh;
+    width:100%;
+    vertical-align: top;
+    background:rgb(253, 125, 1);
+    background:rgba(253, 125, 1, 0);
+}
+
+.main .overlay h1{
+    position:relative;
+    top:25%;
+    text-align: center;
+    color:rgb(0,0,0);
+    opacity: .6;
+    font-size:7em;
+}
+
+.main .overlay h2{
+    position:relative;
+    top:25%;
+    text-align: center;
+    color:rgb(255,255,255);
+    opacity: .8;
+    font-size:5em;
+}
+
+
+
