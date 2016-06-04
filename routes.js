@@ -21,12 +21,9 @@ var express = require('express'),
 router.use(express.static(__dirname + '/styles'));
 router.use(express.static(__dirname + '/images'));
 router.use(express.static(__dirname + '/images/logo'));
-router.get('/', function(req, res) {
-    res.sendFile(path.join(__dirname, 'views', 'index.html'));
-});
 
-router.get('/z', function(req, res) {
-    res.render('test', {title: 'hey', message: 'header'});
+router.get('/', function(req, res) {
+    res.render('pages/index', {title: "elitaylor.io: Skills"});
 });
 
 

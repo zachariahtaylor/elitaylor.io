@@ -15,7 +15,9 @@ var express = require('express'),
 
 //app.use(logger('Developer')); //Developer logger
 var accessLogStream = fs.createWriteStream(__dirname + '/logs/access.log', {flags: 'a'});
-app.use(logger('combined', {stream: accessLogStream}))
+app.use(logger('combined', {stream: accessLogStream}));
+
+app.set('view engine', 'ejs');
 
 app.use(bodyParser.json()); //Parse response body into JSON
 app.use(bodyParser.urlencoded({extended: true}));

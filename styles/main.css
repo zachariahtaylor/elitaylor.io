@@ -42,6 +42,26 @@ inline - display box inline.
     display:inline;
 }
 
+.textWhite{
+    color: #ffffff;
+}
+
+.textGreen{
+    color: rgb(74,147,4);
+    text-shadow: 0px 2px 3px rgb(124,197,54);
+}
+
+.textShadowBlack{
+    text-shadow: 3px 3px 6px #000000;
+}
+
+.textShadowWhite{
+    text-shadow: 2px 2px 4px #FFFFFF;
+}
+
+.backgroundCharcoal{
+    background:rgb(39, 40, 34);
+}
 /*
 Javascript changable css
 
@@ -93,7 +113,7 @@ svg - floats logo right and gives it similar padding to tabs.
 
 .nav a, .dropdown {
     display: block;
-    color: darkgrey;
+    color: rgb(155, 155, 155);
     text-align: center;
     padding: 1.5em;
     text-decoration: none;
@@ -140,8 +160,14 @@ content - Sets an area within that contains padding.
     overflow:hidden;
 }
 
-.main{
+.whole{
     height:100vh;
+}
+.half{
+    height:50vh;
+}
+
+.main{
     background: url(Sunrise.jpg);
     background-color: rgb(253,125,1);
     background-attachment: fixed;
@@ -152,17 +178,63 @@ content - Sets an area within that contains padding.
     background-size: cover;
 }
 
-.first{
-    background-color: #f6c293;
+.webDev{
+    background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+    /*background-color: rgb(39, 40, 34);*/
 }
 
-.second{
-    background-color: #53a0b0;
+.OOP{
+    background-color: rgb(214,208,198);
+}
+
+.Embedded{
+    background: url(Leaf.jpg);
+    background-color: rgb(253,125,1);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.breakLake{
+    background: url(Lake.jpg);
+    background-color: rgb(253,125,1);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 15em;
+}
+
+.breakZion{
+    background: url(Zion.jpg);
+    background-color: rgb(253,125,1);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 15em;
+}
+
+.section .title{
+    font-size: 7em;
+    text-align: center;
+}
+
+.section .subtitle{
+    font-size: 3em;
 }
 
 .content{
-    font-size: 2em;
     padding: 2em;
+    margin:auto;
+    text-align:center;
 }
 
 .column-2{
@@ -200,7 +272,9 @@ main overlay 2 - smaller clear
     text-align: center;
     color:rgb(0,0,0);
     opacity: .6;
-    font-size:7em;
+    font-size:10em;
+    text-shadow: 3px 3px 6px #000000;
+    
 }
 
 .main .overlay h2{
@@ -208,9 +282,104 @@ main overlay 2 - smaller clear
     top:25%;
     text-align: center;
     color:rgb(255,255,255);
-    opacity: .8;
-    font-size:5em;
+    opacity: .6;
+    font-size:7em;
+    text-shadow: 3px 3px 6px #000000;
 }
 
+.blackOverlay{
+    position: relative;
+    top: 0;
+    left: 0;
+    display:block;
+    height:inherit;
+    width:100%;
+    vertical-align: top;
+    background:rgb(39, 40, 34);
+    background:rgba(39, 40, 34, .5);
+}
 
+/*
+Logo image css
 
+Includes
+webLogo
+oopLogo
+*/
+
+.webLogo{
+    display:inline-block;
+    margin:2em;
+    width: 11em;
+    height: 11em;
+    padding: 2.5em;
+    border: .1em solid blue;
+    border-radius: 0em 5em;
+    background: #474747;
+}
+
+.reverseWebLogo{
+    border-radius: 5em 0em;
+}
+
+.webLogo img{
+    width: 10em;
+    height: 10em;
+}
+
+.webLogo .text{
+    font-weight: 900;
+    font-size: 2em;
+    color:#222;
+    text-shadow: 0px 2px 3px #555;
+}
+
+.oopLogo{
+    display:inline-block;
+    margin:2em;
+    width: 11em;
+    height: 11em;
+    padding: 2.5em;
+    border: .25em solid rgb(204, 198, 188);
+    border-radius: 1em;
+    background: rgb(194,188,178);
+}
+
+.oopLogo img{
+    width: 10em;
+    height: 10em;
+}
+
+.oopLogo .text{
+    font-weight: 900;
+    font-size: 2em;
+    color: rgb(100, 100, 100);
+    text-shadow: 0px 2px 3px rgb(150, 150, 150);
+}
+
+.embLogo{
+    display:inline-block;
+    margin:2em;
+    width: 12em;
+    height: 13em;
+    padding: 2.5em;
+    border: .25em solid rgb(124,197,54);
+    border-radius: 0em 12em 1em 11em;
+    background: rgb(74,147,4);
+}
+
+.embLogoReverse{
+    border-radius: 12em 0em 11em 1em;
+}
+
+.embLogo img{
+    width: 10em;
+    height: 10em;
+}
+
+.embLogo .text{
+    font-weight: 900;
+    font-size: 2em;
+    color: rgb(54,127,10);
+    text-shadow: 0px 2px 3px rgb(74, 147, 34);
+}

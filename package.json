@@ -1,5 +1,5 @@
 {
-  "name": "webserver",
+  "name": "elitaylor.io",
   "version": "1.0.0",
   "description": "Personal web server for use in serving personal pages and code blocks.",
   "main": "server.js",
@@ -16,6 +16,7 @@
   "author": "Zachariah Taylor",
   "license": "ISC",
   "dependencies": {
+    "ejs": "^1.0.0", 
     "express": "^4.13.4"
   }
 }
