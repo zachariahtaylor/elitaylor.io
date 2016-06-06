@@ -22,8 +22,14 @@ router.use(express.static(__dirname + '/styles'));
 router.use(express.static(__dirname + '/images'));
 router.use(express.static(__dirname + '/images/logo'));
 
+
+//Home
 router.get('/', function(req, res) {
     res.render('pages/index', {title: "elitaylor.io: Skills"});
+});
+
+//The 404 Route 
+router.get('*', function(req, res){
 });
 
 

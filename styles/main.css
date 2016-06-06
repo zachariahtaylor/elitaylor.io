@@ -47,7 +47,7 @@ inline - display box inline.
 }
 
 .textGreen{
-    color: rgb(74,147,4);
+    color: rgb(54,127,0);
     text-shadow: 0px 2px 3px rgb(124,197,54);
 }
 
@@ -187,9 +187,21 @@ content - Sets an area within that contains padding.
     background-color: rgb(214,208,198);
 }
 
+.IOS{
+    background: url(orange.svg);
+    background-color: rgb(253,125,1);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin-bottom:-48em;
+}
+
 .Embedded{
     background: url(Leaf.jpg);
-    background-color: rgb(253,125,1);
+    background-color: rgb(134,209,6);
     background-attachment: fixed;
     background-repeat: no-repeat;
     -webkit-background-size: cover;
@@ -210,8 +222,8 @@ content - Sets an area within that contains padding.
     height: 15em;
 }
 
-.breakZion{
-    background: url(Zion.jpg);
+.breakHawaii{
+    background: url(Hawaii.jpg);
     background-color: rgb(253,125,1);
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -235,6 +247,11 @@ content - Sets an area within that contains padding.
     padding: 2em;
     margin:auto;
     text-align:center;
+}
+
+.iosContent{
+    position:relative;
+    top:-57em;
 }
 
 .column-2{
@@ -310,16 +327,12 @@ oopLogo
 .webLogo{
     display:inline-block;
     margin:2em;
-    width: 11em;
-    height: 11em;
+    width: 13em;
+    height: 13em;
     padding: 2.5em;
     border: .1em solid blue;
-    border-radius: 0em 5em;
+    border-radius: 10em;
     background: #474747;
-}
-
-.reverseWebLogo{
-    border-radius: 5em 0em;
 }
 
 .webLogo img{
@@ -357,6 +370,37 @@ oopLogo
     text-shadow: 0px 2px 3px rgb(150, 150, 150);
 }
 
+.iosLogo{
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    width: 13em;
+    height: 13em;
+    padding-bottom:3em;
+}
+
+.iosLogo img{
+    width: 10em;
+    height: 10em;
+    border-radius: 2em;
+    -ms-animation: wiggle .3s linear infinite;
+    -moz-animation: wiggle .3s linear infinite;
+    -webkit-animation: wiggle .3s linear infinite;
+    animation: wiggle .3s linear infinite;
+    animation-play-state: paused; 
+}
+
+.iosLogo img:hover{
+    animation-play-state: running; 
+}
+
+.iosLogo .text{
+    font-weight: 900;
+    font-size: 2em;
+    color: rgb(100, 100, 100);
+    text-shadow: 0px 2px 3px rgb(150, 150, 150);
+}
+
 .embLogo{
     display:inline-block;
     margin:2em;
@@ -380,6 +424,49 @@ oopLogo
 .embLogo .text{
     font-weight: 900;
     font-size: 2em;
-    color: rgb(54,127,10);
+    color:rgb(44,117,0);
     text-shadow: 0px 2px 3px rgb(74, 147, 34);
+}
+
+/*
+Animations
+
+Wiggle - wiggles an image left to right.
+*/
+
+@-ms-keyframes wiggle{0%{-ms-transform:rotate(3deg);}50%{-ms-transform:rotate(-3deg);}100%{-ms-transform:rotate(3deg);}}
+
+@-moz-keyframes wiggle{0%{-moz-transform:rotate(3deg);}50%{-moz-transform:rotate(-3deg);}100%{-moz-transform:rotate(3deg);}}
+
+@-webkit-keyframes wiggle{0%{-webkit-transform:rotate(3deg);}50%{-webkit-transform:rotate(-3deg);}100%{-webkit-transform:rotate(3deg);}}
+
+@keyframes wiggle{0%{transform:rotate(3deg);}50%{transform:rotate(-3deg);}100%{transform:rotate(3deg);}}
+
+/*
+Media Query
+
+max-width:600px
+    -increase font fize
+
+*/
+
+@media (max-width: 650px){
+    body{
+        font-size:40%;
+    }
+    .nav{
+        display:none;
+    }
+
+    .IOS{
+        background-size: cover;
+        margin-bottom:0em;
+    }
+    .iosContent{
+        position:unset;
+        top:0em;
+    }
+    .iosMobile{
+        display:none;
+    }
 }
