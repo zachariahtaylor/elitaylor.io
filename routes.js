@@ -18,14 +18,18 @@ var express = require('express'),
 
 
 //Static Files
-router.use(express.static(__dirname + '/styles'));
-router.use(express.static(__dirname + '/images'));
-router.use(express.static(__dirname + '/images/logo'));
-
+router.use(express.static(__dirname + '/public/styles'));
+router.use(express.static(__dirname + '/public/js'));
+router.use(express.static(__dirname + '/public/images'));
 
 //Home
 router.get('/', function(req, res) {
     res.render('pages/index', {title: "elitaylor.io: Skills"});
+});
+
+//Angular
+router.get('/angular', function(req, res){
+	res.render('pages/angular', {title: "Angular: elitaylor.io"});
 });
 
 //The 404 Route 

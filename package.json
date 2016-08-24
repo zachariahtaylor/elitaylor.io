@@ -16,7 +16,10 @@
   "author": "Zachariah Taylor",
   "license": "ISC",
   "dependencies": {
-    "ejs": "^1.0.0", 
+    "ejs": "^1.0.0",
     "express": "^4.13.4"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1"
   }
 }
